@@ -1,13 +1,20 @@
 Pampicture::Application.routes.draw do
-  ActiveAdmin.routes(self)
+  
+  
+  root :to => "pages#home"
+  
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "sign_up" => "users#new", :as => "sign_up"
 
+  ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   resources :categories
-
   resources :products
+  resources :users
+  resources :sessions
   
-  root :to => "pages#home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
