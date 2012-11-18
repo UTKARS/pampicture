@@ -13,9 +13,60 @@
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-
-<%= yield %>
-
+<section id="wrapper">
+  <header id="page_header">
+    
+    <nav id="session_nav">
+      <ul>
+        <li><img src="/assets/cart_icon.png" alt="cart"/>Shopping Cart (#)</li>
+        <% if current_user %>
+          <li><%= link_to "#{current_user.email}", '#' %></li>
+          <li><%= link_to "Log out", log_out_path %></li>
+        <% else %>
+          <li><%= link_to "Log In", log_in_path %></li>
+          <li><%= link_to "Sign up", sign_up_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+    
+    <section id="logo">
+      <img src="/assets/Pampicture_logo.png" alt="Pampicture" />
+      <!--<%#= link_to (image_tag "Pampicture_logo.png"), root_path %>-->
+    </section>
+    
+    <nav id="main_nav">
+      <ul>
+        <li><%= link_to "Home", root_url %></li>
+        <li><%= link_to "Products", '#' %></li>
+        <li><%= link_to "About", '#' %></li>
+        <li><%= link_to "Contact Us", '#' %></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="main">
+    <%= yield %>
+  </section>
+  
+  <footer id="copyright">
+    
+    <article id="social_media">
+      <p>FOLLOW US</p>
+      <nav id="social_nav">
+        <ul>
+          <li><a href="#"><img src="/assets/facebook_icon.png" /></a></li>
+          <li><a href="#"><img src="/assets/twitter_icon.png" /></a></li>
+          <li><a href="#"><img src="/assets/blogger_icon.png" /></a></li>
+          <li><a href="#"><img src="/assets/sharethis_icon.png" /></a></li>
+        </ul>
+      </nav>
+    </article>
+    
+    <p>COPYRIGHT &copy; 2012 PAMPICTURE&trade;</p>
+    
+  </footer>
+  
+</section>
 
 </body>
 </html>
