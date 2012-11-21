@@ -1,4 +1,5 @@
-ActiveAdmin.register AdminUser do     
+ActiveAdmin.register AdminUser do
+  batch_action :destroy, false
   index do                            
     column :email                     
     column :current_sign_in_at        
