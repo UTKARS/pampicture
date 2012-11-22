@@ -10,10 +10,12 @@ ActiveAdmin.register Product do
       number_to_currency product.price, :unit => "&dollar;"
     end 
     column :category
-    column :stock_quantity
+    column "Stock", :stock_quantity
     column "Description" do |product|
-      truncate(product.description, :length => 210)
+      truncate(product.description, :length => 100)
     end
+    column "Date Added:", :created_at
+    column "Date Updated:", :updated_at    
     default_actions
   end
 end
