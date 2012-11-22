@@ -6,12 +6,13 @@ Pampicture::Application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "sign_up" => "users#new", :as => "sign_up"
-
+  get "products" => "products#index", :as => "products"
+  get "products/:id" => "products#show", :as => "product"
+  get "category/:id" => "categories#index", :as => "category"
+  
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :categories
-  resources :products
   resources :users
   resources :sessions
   
