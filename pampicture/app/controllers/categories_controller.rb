@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @category = Category.find(params[:id])
+    @categories = Category.all
     @products = @category.products
     
     respond_to do |format|

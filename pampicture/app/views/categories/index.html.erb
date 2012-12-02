@@ -1,2 +1,10 @@
-<h1><%= @category.name %></h1>
- <%= render @products %>
+<nav class="side_nav">
+  <ul>
+    <%= render @category %>
+  </ul>
+</nav>
+
+<section class="products">
+  <h1><%= @category.name %></h1>
+   <%= render @products %>
+</section>

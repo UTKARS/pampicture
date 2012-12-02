@@ -1,18 +1,15 @@
-<p id="notice"><%= notice %></p>
+<section class="product_partial">
 
-<p>
-  <b>Name:</b>
-  <%= product.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-
-<p>
-  <b>Price:</b>
-  <%= product.price %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= product.image %>
-</p>
-
+  <section class="left">
+    <%= link_to image_tag(product.image, :width => "140px"), product %>
+    <p><%= link_to product.name, product %></p>
+  </section>
+  
+  <section class="right">
+    <p><%= number_to_currency product.price, :unit => "&dollar;" %></p>
+    <%= link_to "Add to Cart", "#" %>
+  </section>
+  
+</section>

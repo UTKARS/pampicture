@@ -1,12 +1,17 @@
 
 <% @categories.each do |category| %>
-<div>
-<h1><%= category.name %></h1>
-    <%= link_to "View more", category %>
-  <% 4.times do |num| %>
-    <% product = category.products[num] %>    
-    <p><%= image_tag(product.image, :width => "120px") %></p>
-    <p><%= link_to product.name, product %></p>
-  <% end %>
-</div>
+<section class="four_products">
+<h1><%= category.name %><%= link_to "View more", category %></h1>
+  <nav>
+    <ul>
+      <% 4.times do |num| %>
+      <li>
+        <% product = category.products[num] %>    
+        <%= link_to image_tag(product.image, :width => "140"), product %>
+        <p><%= link_to product.name, product %></p>
+      </li>
+      <% end %>
+    </ul>
+  </nav>
+</section>
 <% end %>

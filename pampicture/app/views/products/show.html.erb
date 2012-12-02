@@ -1,6 +1,15 @@
-<%= render @product %>
+<nav class="side_nav">
+  <ul>
+    <%= render @category %>
+  </ul>
+</nav>
 
-<p>
-  <b>Description:</b>
-  <%= @product.description %>
-</p>
+<section class="products">
+  <h1><%= @category.name %></h1>
+  
+  <%= render @product %>
+  
+  <p class="description">
+    <%= @product.description %>
+  </p>
+</section>

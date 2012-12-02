@@ -1,3 +1,128 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a{
+    text-decoration: none;
+}
+
+section.four_products{
+    h1{
+        text-transform: uppercase;
+        padding: 10px 0 5px 20px;
+        font-weight: bold;
+        font-size: 22px;
+        color: white;
+        background: #FF5F00;
+        a{
+            font-size: 14px;
+            margin: 6px 30px 0 0;
+            text-decoration: none;
+            float: right;
+            color: #FFA773; 
+        }
+        a:hover{
+            background: rgba(0,0,0,0.2);
+        }
+    }
+    nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            width: 155px;
+            margin: 0 20px;
+            display: inline-table;
+            p{
+                font-size: 14px;
+                margin: 10px 0 10px 0;
+                a{
+                    color: #713A19;
+                    text-decoration: none;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+nav.side_nav{
+    width: 19%;
+    float: left;
+    padding-top: 40px;
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            background: #FF8740;
+            margin: 5px;
+            padding: 2px;
+            text-align: right;
+            a{
+                color: white;
+                font-size: 16px;
+                padding-right: 10px;
+            }
+        }
+        li:hover{
+            background: #A63E00;
+        }
+    }
+}
+
+section.products{
+    width: 78%;
+    float: right;
+    h1{
+        text-align: right;
+        color: white;
+        background: #A63E00;
+        text-transform: uppercase;
+        font-size: 22px;
+        padding: 5px;
+        margin: 5px 0;
+    }
+    .description{
+        text-align: justify;
+        padding: 20px;
+        clear: both;
+        color: #A63E00;
+    }
+}
+
+section.product_partial{
+    .left{
+        width: 70%;
+        float: left;
+        margin-bottom: 20px;
+        p{
+            margin-top: 30px;
+            font-weight: bold;
+            float: right;
+            width: 60%;
+            a{
+                color:  #A63E00;
+                font-size: 20px; 
+            }
+        }
+    }
+    .right{
+        width: 15%;
+        float: right;
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF5050;
+        }
+        a{
+            color: white;
+            background: #FF8740;
+            padding: 2px 5px;
+        }
+        a:hover{
+            background: #A63E00;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *x require_tree .
+ *= require sessions
+ *= require products
+*/
+
+*{
+    font-family: serif;
+}
+
+html{
+    background: #DDD;
+}
+
+body{
+    background: #FFF;
+    width: 960px;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgba(0,0,0,0.9)
+}
+
+#wrapper{
+    
+}
+
+#page_header{
+    
+    nav ul{
+        list-style: none;
+        margin: 0px;
+        padding: 2px 0;
+        li{
+            display: inline;
+            a{
+                color: white;
+                text-decoration: none;
+                margin: 0 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    
+    #user_nav{
+        padding: 0 80px;
+        background: #A63E00;
+        overflow: auto;
+        div{
+            float: left;
+            color: red;
+            font-weight: bold;
+        }
+        ul{
+            float: right;
+            li {
+                img{
+                    height: 12px;
+                }
+                a{
+                    font-size: 12px;
+                }
+                a:hover{
+                    background: rgba(0,0,0,0.2);
+                }
+            }
+        }
+        
+    }
+    
+    #main_nav{
+        padding: 30px 80px 5px 80px;
+        background: #FF8740;
+        ul{
+            padding-top: 40px;
+            float: right;
+            li{
+                a{
+                    margin: 0 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                a:hover{
+                    text-decoration: overline;
+                    color: #A63E00;
+                }
+            }
+        }
+    }
+}
+
+#main{
+    clear: both;
+    padding: 15px 80px;
+}
+
+#page_footer{
+    clear: both;
+    margin-top: 20px;
+    padding: 5px 120px 60px 120px;
+    background: #A63E00;
+    color: white;
+    #social_media{
+        padding: 15px 0 40px 0 ;
+        nav{
+            
+            p{
+                float: left;
+                font-size: 16px;
+                text-transform: uppercase;
+                margin-top: 2px;
+            }
+                ul{
+                    margin: 0;
+                    padding: 0 5px;
+                    float: left;
+                    list-style: none;
+                li{
+                    display: inline;
+                    a{
+                        padding: 0 2px;
+                        img{
+                            height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        p{
+            font-size: 9px;
+            margin: 0;
+            float: right;
+        } 
+    }
+      
+}
+

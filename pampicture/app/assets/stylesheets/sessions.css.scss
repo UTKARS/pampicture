@@ -1,3 +1,26 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#log_in, #sign_up{
+    width: 25%;
+    h1{
+        padding: 5px;
+        background: #FF5F00;
+        font-size: 16px;
+        text-align: right;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    p{
+        font-weight: bold;
+        color: #FF8740;
+    }
+    input{
+        font-weight: bold;
+        color: #A63E00;
+    }
+    input[type="submit"]{
+        color: black;
+    }
+}
